@@ -1,0 +1,56 @@
+﻿@model List<Activity4.Models.UserModel>
+
+@{
+    ViewBag.Title = "My App";
+    Layout = "~/Views/Shared/_MyDefaultLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+
+    <style>
+        .Welcome {
+            font-weight: bold;
+            text-align: center;
+            font-family: Arial;
+            font-size: 24px;
+            display: block;
+        }
+
+        .Customers {
+            font-weight: bold;
+            text-align: left;
+            font-family: Arial;
+            font-size: 18px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div> 
+        @Html.Label("Welcome to Razor!", new { @class="Welcome"})
+        @Html.Label("My Customers are: ", new { @class="Customers"})
+    </div>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+        </tr>
+
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => user.Name)</td>
+                <td>@Html.DisplayFor(modelItem => user.Email)</td>
+                <td>@Html.DisplayFor(modelItem => user.Phone)</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
