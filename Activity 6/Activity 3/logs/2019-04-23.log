@@ -1,0 +1,12 @@
+2019-04-23 15:29:34.5646 INFO Entering LoginController.Login()
+2019-04-23 15:29:34.5945 INFO Parameters are: {"Username":"EmilyQ","Password":"password"}
+2019-04-23 15:29:37.2661 INFO Exit LoginController.Login() with login passed
+2019-04-23 15:29:58.2321 INFO Entering LoginController.Login()
+2019-04-23 15:29:58.2321 INFO Parameters are: {"Username":"EmlyiQ","Password":"password"}
+2019-04-23 15:29:58.2321 INFO Exit LoginController.Login() with login failed
+2019-04-23 15:43:03.6443 INFO Entering LoginController.Login()
+2019-04-23 15:43:03.6672 INFO Parameters are: {"Username":"EmilyQ","Password":"password"}
+2019-04-23 15:43:06.7856 INFO Exit LoginController.Login() with login passed
+2019-04-23 15:44:44.6193 INFO Entering LoginController.Login()
+2019-04-23 15:44:44.6203 INFO Parameters are: {"Username":"aasda","Password":"password"}
+2019-04-23 15:44:44.6203 INFO Exit LoginController.Login() with login failed

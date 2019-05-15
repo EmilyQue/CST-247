@@ -1,0 +1,13 @@
+2019-04-27 01:31:04.1042 INFO Entering Controller: Login:Index
+2019-04-27 01:31:04.1400 INFO Exiting Controller: Login:Index
+2019-04-27 01:36:34.7999 INFO Entering Controller: Login:GetAllUsers
+2019-04-27 01:36:34.8358 INFO Creating Users and putting in the Cache.
+2019-04-27 01:36:34.8448 INFO Exiting Controller: Login:GetAllUsers
+2019-04-27 01:39:33.5955 INFO Entering Controller: Login:GetUsers
+2019-04-27 01:39:33.6404 INFO Creating Users and putting in the Cache.
+2019-04-27 01:39:33.6404 INFO Exiting Controller: Login:GetUsers
+2019-04-27 02:38:02.2875 INFO Test Logging Service 1 at index()
+2019-04-27 02:41:12.5965 INFO Test Logging Service 2 at index()
+2019-04-27 02:55:44.8339 INFO Test Logging Service 2 at index()
+2019-04-27 03:01:52.0868 INFO Test Logging Service 2 at index()
+2019-04-27 03:03:24.6526 INFO Test Logging in TestService.TestLogger() invoked
