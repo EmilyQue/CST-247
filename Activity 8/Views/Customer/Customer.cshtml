@@ -1,0 +1,54 @@
+﻿@using ICA8.Models
+@model Tuple<List<CustomerModel>, CustomerModel>
+
+@{
+    ViewBag.Title = "Customer Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        HttpMethod = "Post",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "customerInfo",
+        OnSuccess = "ajaxSuccess"
+    };
+}
+
+<script type="text/javascript">
+    function ajaxSuccess()
+    {
+        $.post('@Url.Action("GetMoreInfo", "Customer")', { customer: 2 }, function (data) { alert(data); });
+    }
+</script>
+
+@Html.Label("Please select a customer: ")
+
+@*
+    @using (Html.BeginForm("OnSelectCustomer", "Customer", FormMethod.Post))
+*@
+
+@using (Ajax.BeginForm("OnSelectCustomer2", "Customer", ajaxOptions, new { id = "myform" }))
+{
+    @Html.AntiForgeryToken();
+    var selected = false;
+    foreach (var customer in Model.Item1)
+    {
+        if (Model.Item1.IndexOf(customer) == 0)
+        {
+            selected = true;
+        }
+
+        else
+        {
+            selected = false;
+        }
+
+        @Html.RadioButton("user", customer.ID, selected, new { onchange = "$('#myform').trigger('submit');" });
+        @Html.Label(customer.Name);
+    }
+
+    <div id="customerInfo">
+        @Html.Partial("_CustomerDetails", Model.Item2)
+    </div>
+
+}
+
